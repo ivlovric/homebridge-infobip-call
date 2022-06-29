@@ -1,82 +1,67 @@
 
-# "Dummy Switches" Plugin
+<p align="center">
+<img src="https://github.com/homebridge/branding/raw/master/logos/homebridge-wordmark-logo-vertical.png" width="150">
+</p>
+<p align="center">
+<img src="https://www.infobip.com/wp-content/themes/infobip/static/ui/infobip-logo.svg" width="230">
+</p>
 
-Example config.json:
 
-```
-    "accessories": [
-        {
-          "accessory": "DummySwitch",
-          "name": "My Switch 1"
-        }   
-    ]
+# Homebridge plugin for Infobip Call TTS platform
 
-```
+This is a template Homebridge accessory plugin for Infobip Call TTS platform that enable creating of outbound call to soecified number with specific message to be converted from text to speach.
 
-With this plugin, you can create any number of fake switches that will do nothing when turned on (and will automatically turn off right afterward, simulating a stateless switch). This can be very useful for advanced automation with HomeKit scenes.
+It is forked from generic switch plugin https://github.com/nfarina/homebridge-dummy 
 
-For instance, the Philips Hue app will automatically create HomeKit scenes for you based on Hue Scenes you create. But what if you want to create a scene that contains both Philips Hue actions and other actions (like turning on the coffee maker with a WeMo outlet)? You are forced to either modify the Hue-created scene (which can be a HUGE list of actions if you have lots of lights) or build your own HomeKit lighting scenes.
+## Get infobip subscription
 
-Instead, you can link scenes using these dummy switches. Let's say you have a Hue Scene called "Rise and Shine" that you want to activate in the morning. And you have also setup the system HomeKit scene "Good Morning" to turn on your coffee maker and disarm you security system. You can add a single dummy switch to your Good Morning scene, then create a Trigger based on the switching-on of the dummy switch that also activates Rise And Shine.
+Infobip offers trial accout that can be created freely with fair ammount of credits for many types of Voice, SMS or OTT services.
 
-## Stateful Switches
+Getting started with Infobip APIs - https://www.infobip.com/docs/api
 
-The default behavior of a dummy switch is to turn itself off one second after being turned on. However you may want to create a dummy switch that remains on and must be manually turned off. You can do this by passing an argument in your config.json:
+Trial account registration page - https://www.infobip.com/signup
 
-```
-    "accessories": [
-        {
-          "accessory": "DummySwitch",
-          "name": "My Stateful Switch 1",
-          "stateful": true
-        }   
-    ]
+## Install
+
+### Manual
+Using a terminal, navigate to the project folder and run this command to install the development dependencies:
 
 ```
-
-## Reverse Switches
-
-You may also want to create a dummy switch that turns itself on one second after being turned off. This can be done by passing the 'reverse' argument in your config.json:
-
-```
-    "accessories": [
-        {
-          "accessory": "DummySwitch",
-          "name": "My Stateful Switch 1",
-          "reverse": true
-        }   
-    ]
-
+npm install
 ```
 
-## Timed Switches
+### Using Homebridge Plugin search pane
 
-You may also want to create a timed switch that turns itself off after being on for a given time (for example, five seconds). This can be done by passing the 'time' argument in your config.json:
+## Build Plugin
 
-```
-    "accessories": [
-        {
-          "accessory": "DummySwitch",
-          "name": "My Stateful Switch 1",
-          "time": 5000
-        }   
-    ]
+TypeScript needs to be compiled into JavaScript before it can run. The following command will compile the contents of your [`src`](./src) directory and put the resulting code into the `dist` folder.
 
 ```
+npm run build
+```
 
-## Resettable Timed Switches
+## Link To Homebridge
 
-You may also want to create a timed switch that is reset each time it is activated. This way, the original timer is reset instead of creating a new timer. 
-This can be done by passing the 'resettable' argument in your config.json:
+Run this command so your global install of Homebridge can discover the plugin in your development environment:
 
 ```
-    "accessories": [
-        {
-          "accessory": "DummySwitch",
-          "name": "My Stateful Switch 1",
-          "time": 5000,
-          "resettable": true
-        }   
-    ]
+npm link
+```
+
+You can now start Homebridge, use the `-D` flag so you can see debug log messages in your plugin:
 
 ```
+homebridge -D
+```
+
+## Watch For Changes and Build Automatically
+
+If you want to have your code compile automatically as you make changes, and restart Homebridge automatically between changes you can run:
+
+```
+npm run watch
+```
+
+This will launch an instance of Homebridge in debug mode which will restart every time you make a change to the source code. It will load the config stored in the default location under `~/.homebridge`. You may need to stop other running instances of Homebridge while using this command to prevent conflicts. You can adjust the Homebridge startup command in the [`nodemon.json`](./nodemon.json) file.
+
+
