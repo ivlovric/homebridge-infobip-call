@@ -1,5 +1,4 @@
 "use strict";
-let InfoBip = require('infobip-nodejs')
 
 var Service, Characteristic, HomebridgeAPI;
 const { HomebridgeDummyVersion } = require('./package.json');
@@ -7,7 +6,6 @@ const { HomebridgeDummyVersion } = require('./package.json');
 const request = require('request');
 
 module.exports = function(homebridge) {
-
   Service = homebridge.hap.Service;
   Characteristic = homebridge.hap.Characteristic;
   HomebridgeAPI = homebridge;
@@ -25,8 +23,6 @@ function InfobipTTS(log, config) {
   this.TTSText = config.TTSText;
 
   this.timer = null;
-
-
   this._service = new Service.Switch(this.name);
   
   this.informationService = new Service.AccessoryInformation();
@@ -71,7 +67,7 @@ InfobipTTS.prototype._setOn = function(on, callback) {
       this._service.setCharacteristic(Characteristic.On, false);
     }.bind(this), this.time);
 
-    this.log.info('Sending Infobip API req');
+    this.log.info('Sending Infobip API request');
 
  //var url = "http://10.116.118.127:8000";
  var url = "http://xr5elq.api.infobip.com/tts/3/advanced";
@@ -106,13 +102,12 @@ request({
   body: JSONObject
 }, function (error, response, body){
   if(error) { 
-    console.error("Error while communication with Infobip API and ERROR is :  " + error);
+    console.error("-->X Error while communicating with Infobip API:  " + error);
   }
-
+  console.error("-->V Sending Infobip API request successful");
   console.log(body);
   //console.log(response.statusCode);
 });
-
 
   } else if (!on && this.reverse && !this.stateful) {
     if (this.resettable) {
