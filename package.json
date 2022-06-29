@@ -4,7 +4,10 @@
   "description": "Infobip switch for Homebridge",
   "license": "ISC",
   "keywords": [
-    "homebridge-plugin"
+    "homebridge-plugin",
+    "infobip",
+    "homebridge",
+    "call"
   ],
   "repository": {
     "type": "git",
