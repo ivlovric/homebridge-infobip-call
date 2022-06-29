@@ -32,6 +32,16 @@ npm install
 ```
 
 ### Using Homebridge Plugin search pane
+<img width="508" alt="Screenshot 2022-06-29 at 14 36 07" src="https://user-images.githubusercontent.com/37185376/176437732-04c27790-bbae-42ae-90ae-0fab52719ea2.png">
+
+## Configure
+
+Configuration can be done by UI in homebridge-config-ui interface.
+Example:
+<img width="870" alt="Screenshot 2022-06-29 at 14 30 54" src="https://user-images.githubusercontent.com/37185376/176437207-b2589e46-f8c0-4b38-8ce6-a1d3cca567ca.png">
+
+<img width="796" alt="Screenshot 2022-06-29 at 14 31 26" src="https://user-images.githubusercontent.com/37185376/176437494-29cd6715-4073-4fa5-aafe-ebe6db8c1f72.png">
+
 
 ## Build Plugin
 
