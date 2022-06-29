@@ -9,7 +9,7 @@
 
 # Homebridge plugin for Infobip Call TTS platform
 
-This is a template Homebridge accessory plugin for Infobip Call TTS platform that enable creating of outbound call to soecified number with specific message to be converted from text to speach.
+This is a Homebridge accessory plugin for Infobip Call TTS platform that enables creating of outbound call to specified number with specific message to be converted from text to speach.
 
 It is forked from generic switch plugin https://github.com/nfarina/homebridge-dummy 
 
