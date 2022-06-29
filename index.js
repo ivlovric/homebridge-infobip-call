@@ -67,7 +67,7 @@ InfobipTTS.prototype._setOn = function(on, callback) {
       this._service.setCharacteristic(Characteristic.On, false);
     }.bind(this), this.time);
 
-    this.log.info('Sending Infobip API request');
+    this.log.info('Sending Infobip API request.');
 
  //var url = "http://10.116.118.127:8000";
  var url = "http://xr5elq.api.infobip.com/tts/3/advanced";
