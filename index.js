@@ -104,7 +104,7 @@ request({
   if(error) { 
     console.error("-->X Error while communicating with Infobip API:  " + error);
   }
-  console.error("-->V Sending Infobip API request successful");
+  console.error("-->V Sending Infobip API request successful.");
   console.log(body);
   //console.log(response.statusCode);
 });
