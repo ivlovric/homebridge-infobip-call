@@ -69,10 +69,9 @@ InfobipTTS.prototype._setOn = function(on, callback) {
 
     this.log.info('Sending Infobip API request.');
 
- //var url = "http://10.116.118.127:8000";
- var url = "http://xr5elq.api.infobip.com/tts/3/advanced";
+var url = BaseURL + "/tts/3/advanced";
 
- var JSONObject = {
+var JSONObject = {
   "messages": [
     {
       "from": this.CallingNumber,

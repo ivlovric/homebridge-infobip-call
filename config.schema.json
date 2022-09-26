@@ -28,6 +28,12 @@
                 "required": true,
                 "description": "Infobip provided API key"
             },
+            "BaseURL": {
+                "title": "BaseURL",
+                "type": "string",
+                "required": true,
+                "description": "Infobip provided base URL"
+            },
             "CalledNumber": {
                 "title": "CalledNumber",
                 "type": "number",
