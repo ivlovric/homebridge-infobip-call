@@ -9,7 +9,7 @@
 
 # Homebridge plugin for Infobip Call TTS platform
 
-This is a Homebridge https://homebridge.io/ accessory plugin for Infobip Call TTS platform that enables creating of outbound call to specified number with specific message to be converted from text to speech. It can be trigerred manually or by automating and trigering by other Homekit devices or sensors for enhanced home automation flows.
+This is a Homebridge https://homebridge.io/ accessory plugin for Infobip Call TTS platform that enables creating of outbound call to specified number with specific message to be converted from **text to speech**. It can be trigerred manually or by automating and trigering by other Homekit devices or sensors for enhanced home automation flows.
 
 
 It is forked from generic switch plugin https://github.com/nfarina/homebridge-dummy 
