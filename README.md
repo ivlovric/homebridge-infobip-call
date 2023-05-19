@@ -3,7 +3,7 @@
 <img src="https://github.com/homebridge/branding/raw/master/logos/homebridge-wordmark-logo-vertical.png" width="150">
 </p>
 <p align="center">
-<img src="https://www.infobip.com/wp-content/themes/infobip/static/ui/infobip-logo.svg" width="230">
+<img src="https://seekvectorlogo.com/wp-content/uploads/2019/06/infobip-vector-logo.png" width="230"/>
 </p>
 
 
